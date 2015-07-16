@@ -10,13 +10,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Record"
+        android:text="@string/record"
         android:id="@+id/recording_text"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp" />
 
     <ImageButton
+        android:contentDescription="@string/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mainButton_play"
@@ -25,6 +26,7 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
+        android:contentDescription="@string/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mainButton_stop"
@@ -35,6 +37,7 @@
         android:layout_alignEnd="@+id/mainButton_play" />
 
     <ImageButton
+        android:contentDescription="@string/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pause"
@@ -48,6 +51,7 @@
         android:layout_toEndOf="@+id/recording_text" />
 
     <ImageButton
+        android:contentDescription="@string/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pause_play"
@@ -57,5 +61,13 @@
         android:layout_toEndOf="@+id/recording_text"
         android:layout_alignTop="@+id/pause"
         android:layout_alignStart="@+id/pause" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:id="@+id/save_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

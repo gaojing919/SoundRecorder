@@ -27,11 +27,35 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/mainButton_pause"
+        android:id="@+id/mainButton_stop"
         android:src="@drawable/button_stop_icon"
         android:layout_alignTop="@+id/mainButton_play"
         android:layout_alignStart="@+id/mainButton_play"
         android:layout_alignBottom="@+id/mainButton_play"
         android:layout_alignEnd="@+id/mainButton_play" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause"
+        android:src="@drawable/pause"
+        android:focusable="true"
+        android:layout_alignBottom="@+id/mainButton_play"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="273dp"
+        android:layout_alignTop="@+id/mainButton_play"
+        android:layout_toEndOf="@+id/recording_text" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause_play"
+        android:src="@drawable/play"
+        android:focusable="true"
+        android:layout_alignBottom="@+id/mainButton_play"
+        android:layout_toEndOf="@+id/recording_text"
+        android:layout_alignTop="@+id/pause"
+        android:layout_alignStart="@+id/pause" />
 
 </RelativeLayout>

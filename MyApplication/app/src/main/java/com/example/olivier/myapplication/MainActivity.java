@@ -12,10 +12,12 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends ActionBarActivity {
 
     ImageButton mainRecord;
-    ImageButton mainPause;
+    ImageButton mainStop;
+    ImageButton pause;
+    ImageButton pause_play;
     TextView explanation;
 
     @Override
@@ -25,10 +27,19 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         mainRecord = (ImageButton) findViewById(R.id.mainButton_play);
         mainRecord.setVisibility(View.VISIBLE);
-        mainRecord.setOnClickListener(this);
+        mainRecord.setOnClickListener(globalClick);
 
-        mainPause = (ImageButton) findViewById(R.id.mainButton_pause);
-        mainPause.setVisibility(View.INVISIBLE);
+        mainStop = (ImageButton) findViewById(R.id.mainButton_stop);
+        mainStop.setVisibility(View.INVISIBLE);
+        mainStop.setOnClickListener(globalClick);
+
+        pause = (ImageButton) findViewById(R.id.pause);
+        pause.setVisibility(View.VISIBLE);
+        pause.setOnClickListener(globalClick);
+
+        pause_play = (ImageButton) findViewById(R.id.pause_play);
+        pause_play.setVisibility(View.INVISIBLE);
+        pause_play.setOnClickListener(globalClick);
 
         explanation = (TextView) findViewById(R.id.recording_text);
 
@@ -58,13 +69,50 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View v) {
 
-        //Code part of Recording
+    final View.OnClickListener globalClick = new View.OnClickListener() {
+        @Override
+        public void onClick(final View v) {
 
-        mainRecord.setVisibility(View.INVISIBLE);
-        mainPause.setVisibility(View.VISIBLE);
-        explanation.setText("Recording");
-    }
+            switch (v.getId()) {
+                case R.id.mainButton_play:
+                    //The app is recording
+                    mainRecord.setVisibility(View.INVISIBLE);
+                    mainStop.setVisibility(View.VISIBLE);
+                    explanation.setText("Recording");
+                    break;
+
+                case R.id.mainButton_stop:
+                    //the recording stop
+                    //save button must appear
+                    mainRecord.setVisibility(View.VISIBLE);
+                    mainStop.setVisibility(View.INVISIBLE);
+                    explanation.setText("Record");
+                    break;
+
+                case R.id.pause:
+                    //set the recording in pause mode if the app is playing
+                    //stop if stop button is pressed
+                    if (explanation.getText() == "Recording") {
+                        mainRecord.setVisibility(View.INVISIBLE);
+                        mainStop.setVisibility(View.VISIBLE);
+                        pause_play.setVisibility(View.VISIBLE);
+                        pause.setVisibility(View.INVISIBLE);
+                        explanation.setText("Pause");
+                    }
+                    break;
+
+                case R.id.pause_play:
+                    //continue recording after pause
+                    if (explanation.getText()=="Pause"){
+                        mainRecord.setVisibility(View.INVISIBLE);
+                        mainStop.setVisibility(View.VISIBLE);
+                        pause.setVisibility(View.VISIBLE);
+                        pause_play.setVisibility(View.INVISIBLE);
+                        explanation.setText("Recording");
+                    }
+                    break;
+            }
+        }
+    };
 }

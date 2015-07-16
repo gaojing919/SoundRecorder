@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">SoundRecorder</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_audio">Audio</string>
-    <string name="title_activity_list">listActivity</string>
-    <string name="title_activity_iteam">IteamActivity</string>
-</resources>

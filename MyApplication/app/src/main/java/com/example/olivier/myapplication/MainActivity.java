@@ -18,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
     ImageButton mainStop;
     ImageButton pause;
     ImageButton pause_play;
+    Button save;
     TextView explanation;
 
     @Override
@@ -43,7 +44,9 @@ public class MainActivity extends ActionBarActivity {
 
         explanation = (TextView) findViewById(R.id.recording_text);
 
-
+        save = (Button) findViewById(R.id.save_button);
+        save.setVisibility(View.INVISIBLE);
+        save.setOnClickListener(globalClick);
     }
 
 
@@ -79,6 +82,7 @@ public class MainActivity extends ActionBarActivity {
                     //The app is recording
                     mainRecord.setVisibility(View.INVISIBLE);
                     mainStop.setVisibility(View.VISIBLE);
+                    save.setVisibility(View.INVISIBLE);
                     explanation.setText("Recording");
                     break;
 
@@ -87,6 +91,7 @@ public class MainActivity extends ActionBarActivity {
                     //save button must appear
                     mainRecord.setVisibility(View.VISIBLE);
                     mainStop.setVisibility(View.INVISIBLE);
+                    save.setVisibility(View.VISIBLE);
                     explanation.setText("Record");
                     break;
 
@@ -98,6 +103,7 @@ public class MainActivity extends ActionBarActivity {
                         mainStop.setVisibility(View.VISIBLE);
                         pause_play.setVisibility(View.VISIBLE);
                         pause.setVisibility(View.INVISIBLE);
+                        save.setVisibility(View.INVISIBLE);
                         explanation.setText("Pause");
                     }
                     break;
@@ -109,8 +115,15 @@ public class MainActivity extends ActionBarActivity {
                         mainStop.setVisibility(View.VISIBLE);
                         pause.setVisibility(View.VISIBLE);
                         pause_play.setVisibility(View.INVISIBLE);
+                        save.setVisibility(View.INVISIBLE);
                         explanation.setText("Recording");
                     }
+                    break;
+
+                case R.id.save_button:
+                    //save the file
+                    //appear only when on stop
+                    save.setVisibility(View.INVISIBLE);
                     break;
             }
         }

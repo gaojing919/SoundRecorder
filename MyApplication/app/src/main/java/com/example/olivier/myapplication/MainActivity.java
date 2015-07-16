@@ -6,22 +6,33 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
-    Button button_logIn;
-    Text test;
+    ImageButton mainRecord;
+    ImageButton mainPause;
+    TextView explanation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button_logIn = (Button) findViewById(R.id.button_logIn);
-        button_logIn.setOnClickListener(this);
+        mainRecord = (ImageButton) findViewById(R.id.mainButton_play);
+        mainRecord.setVisibility(View.VISIBLE);
+        mainRecord.setOnClickListener(this);
+
+        mainPause = (ImageButton) findViewById(R.id.mainButton_pause);
+        mainPause.setVisibility(View.INVISIBLE);
+
+        explanation = (TextView) findViewById(R.id.recording_text);
+
+
     }
 
 
@@ -49,6 +60,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        logInPage lonIn = new logInPage();
+
+        //Code part of Recording
+
+        mainRecord.setVisibility(View.INVISIBLE);
+        mainPause.setVisibility(View.VISIBLE);
+        explanation.setText("Recording");
     }
 }

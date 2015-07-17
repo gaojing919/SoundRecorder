@@ -1,4 +1,4 @@
-package com.example.administrator.soundrecorder;
+package com.example.olivier.myapplication;
 
 import android.media.MediaPlayer;
 import android.os.Environment;
@@ -27,12 +27,12 @@ public class listActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-       File file=new File(dir);
-        List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+        File file=new File(dir);
+        List<Map<String,Object>> list=new ArrayList<>();
         if(file.list().length>0)
         {
             for(File f :file.listFiles()){
-                Map<String,Object> m=new HashMap<String, Object>();
+                Map<String,Object> m=new HashMap<>();
                 m.put("fileName",f.getName());
                 list.add(m);
 
@@ -40,7 +40,7 @@ public class listActivity extends ActionBarActivity {
         }
 
         SimpleAdapter sa=new SimpleAdapter(this,list,R.layout.activity_iteam,new String[]{"fileName"},new int[]{R.id.textView3});
-       ListView l=(ListView)findViewById(R.id.listView);
+        ListView l=(ListView)findViewById(R.id.listView);
         l.setAdapter(sa);
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -63,7 +63,7 @@ public class listActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_list, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

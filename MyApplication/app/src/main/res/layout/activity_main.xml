@@ -1,60 +1,94 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
     android:id="@+id/layout">
 
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="00:00:00"
-        android:id="@+id/textView"
-        android:gravity="center"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="准备录音中"
-        android:id="@+id/textView2"
+        android:text="00:00:00"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/pause" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/record"
+        android:id="@+id/recording_text"
+        android:textSize="25sp"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:gravity="center" />
+        android:layout_centerHorizontal="true" />
 
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom|center">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="停止"
-                android:id="@+id/button1"
-                android:layout_weight="1" />
+    <ImageButton
+        android:contentDescription="@string/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainButton_play"
+        android:src="@drawable/play"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="开始"
-                android:id="@+id/button2"
-                android:layout_weight="1" />
+    <ImageButton
+        android:contentDescription="@string/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainButton_stop"
+        android:src="@drawable/button_stop_icon"
+        android:layout_alignTop="@+id/mainButton_play"
+        android:layout_alignStart="@+id/mainButton_play"
+        android:layout_alignBottom="@+id/mainButton_play"
+        android:layout_alignEnd="@+id/mainButton_play" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="文件列表"
-                android:id="@+id/button3"
-                android:layout_weight="1" />
+    <ImageButton
+        android:contentDescription="@string/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause"
+        android:src="@drawable/pause"
+        android:focusable="true"
+        android:layout_alignBottom="@+id/mainButton_play"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="273dp"
+        android:layout_alignTop="@+id/mainButton_play"
+        android:layout_toEndOf="@+id/recording_text" />
 
-        </LinearLayout>
+    <ImageButton
+        android:contentDescription="@string/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause_play"
+        android:src="@drawable/play"
+        android:focusable="true"
+        android:layout_alignBottom="@+id/mainButton_play"
+        android:layout_toEndOf="@+id/recording_text"
+        android:layout_alignTop="@+id/pause"
+        android:layout_alignStart="@+id/pause" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:id="@+id/save_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文件列表"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

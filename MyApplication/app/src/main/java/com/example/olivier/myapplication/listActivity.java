@@ -21,26 +21,28 @@ import java.util.Map;
 
 
 public class listActivity extends ActionBarActivity {
-    private MediaPlayer play=new MediaPlayer();
-    private String dir= Environment.getExternalStorageDirectory()+"/SoundRecorder/";
+
+    private MediaPlayer play = new MediaPlayer();
+    private String dir = Environment.getExternalStorageDirectory()+"/SoundRecorder/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
         File file=new File(dir);
         List<Map<String,Object>> list=new ArrayList<>();
         if(file.list().length>0)
         {
             for(File f :file.listFiles()){
-                Map<String,Object> m=new HashMap<>();
+                Map<String,Object> m = new HashMap<>();
                 m.put("fileName",f.getName());
                 list.add(m);
-
             }
         }
 
-        SimpleAdapter sa=new SimpleAdapter(this,list,R.layout.activity_iteam,new String[]{"fileName"},new int[]{R.id.textView3});
-        ListView l=(ListView)findViewById(R.id.listView);
+        SimpleAdapter sa = new SimpleAdapter(this,list,R.layout.activity_iteam,new String[]{"fileName"},new int[]{R.id.textView3});
+        ListView l = (ListView)findViewById(R.id.listView);
         l.setAdapter(sa);
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -53,9 +55,7 @@ public class listActivity extends ActionBarActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
-
         });
 
     }

@@ -8,4 +8,10 @@
     <string name="play">Play</string>
     <string name="stop">Stop</string>
     <string name="pause">Pause</string>
+    <string name="log">Log In</string>
+    <string name="notification">Notifications</string>
+    <string name="bug">Bug Report</string>
+    <string name="faq">FAQ</string>
+    <string name="credit">Credits</string>
+    <string name="preference">Preferences</string>
 </resources>

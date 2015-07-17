@@ -1,10 +1,94 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
 
+
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        android:textSize="30dp"
+        android:id="@+id/indentification"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        android:title="@string/log" />
+
+
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notification"
+        android:textSize="30dp"
+        android:id="@+id/annoncement"
+        android:layout_alignTop="@+id/identification"
+        android:layout_alignStart="@+id/identification"
+        android:layout_alignBottom="@+id/identification"
+        android:layout_alignEnd="@+id/identification"
+
+        android:title="@string/notification" />
+
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bug"
+        android:textSize="30dp"
+        android:id="@+id/problem"
+        android:layout_alignTop="@+id/identification"
+        android:layout_alignStart="@+id/identification"
+        android:layout_alignBottom="@+id/identification"
+        android:layout_alignEnd="@+id/identification"
+
+        android:title="@string/bug" />
+
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq"
+        android:textSize="30dp"
+        android:id="@+id/question"
+        android:layout_alignTop="@+id/identification"
+        android:layout_alignStart="@+id/identification"
+        android:layout_alignBottom="@+id/identification"
+        android:layout_alignEnd="@+id/identification"
+
+        android:title="@string/faq" />
+
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit"
+        android:textSize="30dp"
+        android:id="@+id/advantage"
+        android:layout_alignTop="@+id/identification"
+        android:layout_alignStart="@+id/identification"
+        android:layout_alignBottom="@+id/identification"
+        android:layout_alignEnd="@+id/identification"
+
+        android:title="@string/credit" />
+
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preference"
+        android:textSize="30dp"
+        android:id="@+id/system"
+        android:layout_alignTop="@+id/identification"
+        android:layout_alignStart="@+id/identification"
+        android:layout_alignBottom="@+id/identification"
+        android:layout_alignEnd="@+id/identification"
+
+        android:title="@string/preference" />
+
 </menu>
+

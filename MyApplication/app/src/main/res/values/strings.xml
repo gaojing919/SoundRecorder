@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="record">Record</string>
+    <string name="recording">Recording</string>
+    <string name="save">Save</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="log">Log In</string>
+    <string name="notification">Notifications</string>
+    <string name="bug">Bug Report</string>
+    <string name="faq">FAQ</string>
+    <string name="credit">Credits</string>
+    <string name="preference">Preferences</string>
+</resources>

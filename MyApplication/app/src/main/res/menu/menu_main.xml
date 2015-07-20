@@ -1,19 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
-
-
     <item
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log"
         android:textSize="30dp"
-        android:id="@+id/indentification"
+        android:id="@+id/identification"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
 
@@ -26,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="@string/notification"
         android:textSize="30dp"
-        android:id="@+id/annoncement"
+        android:id="@+id/announcement"
         android:layout_alignTop="@+id/identification"
         android:layout_alignStart="@+id/identification"
         android:layout_alignBottom="@+id/identification"
@@ -68,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="@string/credit"
         android:textSize="30dp"
-        android:id="@+id/advantage"
+        android:id="@+id/credit"
         android:layout_alignTop="@+id/identification"
         android:layout_alignStart="@+id/identification"
         android:layout_alignBottom="@+id/identification"

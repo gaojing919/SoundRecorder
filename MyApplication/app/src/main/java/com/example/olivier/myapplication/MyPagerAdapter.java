@@ -10,7 +10,6 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class MyPagerAdapter extends FragmentPagerAdapter {
 
-
     protected Context mContext;
 
     public MyPagerAdapter(FragmentManager fm, Context context) {

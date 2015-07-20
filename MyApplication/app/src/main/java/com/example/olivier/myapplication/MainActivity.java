@@ -3,6 +3,7 @@ package com.example.olivier.myapplication;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends ActionBarActivity  {
 
     MyPagerAdapter adapter;
     ViewPager myPager;
+    final String tag = "tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +30,49 @@ public class MainActivity extends ActionBarActivity  {
         myPager = (ViewPager) findViewById(R.id.viewpager);
         myPager.setAdapter(adapter);
 //        myPager.setCurrentItem(0);
-
-
+        Log.i(tag, "onCreat");
     }
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(tag, "onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(tag, "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(tag, "onDestroy");
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.identification) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

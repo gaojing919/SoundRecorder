@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_file">\nHow to record</string>
+
+
+    <string name="faq_content1">
+        \nHow to play/pause/stop
+        You will find the record button at the bottom of the main screen. Click on it and then it’s recording.
+
+    </string>
+</resources>

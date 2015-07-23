@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="play_pause_stop">\nHow to play/pause/stop</string>
+
+    <string name="faq_content2">
+
+	    \n\t\tPlay
+        \nThere’re two ways to use the play button the first one is the same as the recording on the main screen.
+        \nThe other is when you already save your file 	and you want to listen/play it.
+	    \n\t\tPause
+	    \nThere’re also two ways to use stop button the one the main screen if you want to pause your recording
+	    to restart it after and the one in your saved files to
+	    pause while listening at it.
+	    \n\t\tStop
+        \nYou will find stop button on the main screen to stop permanently your recording.
+
+    </string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="delete_file">\nHow to delete</string>
+
+    <string name="faq_content3">
+
+	\nTo delete a file you need to make a long touch and then a window will pop up and ask you if you want
+	to delete the file.
+    </string>
+</resources>

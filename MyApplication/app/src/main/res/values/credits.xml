@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="credit_title_fab">SoundRecorder App</string>
+    <string name="credit_author_fab">
+        GaoJing
+        \nWu WenWei
+        \nOlivier Coffin
+        \nCannelle Teissier
+    </string>
+    <string name="credit_content_fab">
+        \nA project achieve over two weeks at the Beijing Jiaotong university as part
+        of a summer school in partnership with school ESIEA.
+    </string>
+
+
+
+
+
+
+
+
+
+
+</resources>

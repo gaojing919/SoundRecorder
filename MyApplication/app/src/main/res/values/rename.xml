@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rename_file">\nHow to rename</string>
+    
+    <string name="faq_content4">
+
+        \nYou can name or rename your file at the saving page with a long touch on it a window will pop up
+	    and ask you to enter a name.
+    </string>
+</resources>
